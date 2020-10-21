@@ -1,0 +1,24 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+
+
+  </head>
+  
+  <body>
+   <marquee direction="right" behavior="alternate"><font size="8" color="blue">hello,world</font></marquee>
+   
+   	   
+   	  <form action="http://127.0.0.1:8080/find_all">
+   	  	<input type="submit" value="查询所有用户" >
+   	  </form>
+      <form action="http://127.0.0.1:8080/findbyid/{id}">
+      	请输入查询的ID：<input type="text"  name="id"><br>
+   	  	<input type="submit" value="查询" >
+   	  </form>
+   	  <form action="http://127.0.0.1:8080/findall">
+   	  	<input type="submit" value="集成mybatis查询所有用户" >
+   	  </form>
+  </body>
+</html>

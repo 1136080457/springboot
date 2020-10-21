@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+
+<configuration>
+
+	<environments default="oracle"> <!-- 指定当前所使用的数据库环境，只能使用一个 -->
+		<environment id="oracle"> <!-- 给这个数据库环境取一个名字 -->	
+			<transactionManager type="jdbc"></transactionManager> <!-- 使用jdbc事务管理的方式 -->
+			<dataSource type="pooled"> <!-- 属于数据连接池来获取连接 -->
+				
+				<property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+				<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:orcl"/>
+				<property name="username" value="test"/>
+				<property name="password" value="test"/>
+				
+			</dataSource>
+			
+		</environment>
+	</environments>
+	
+	<mappers>
+		<mapper resource="mapper/peopleMapper.xml"/>
+	</mappers>
+</configuration>
